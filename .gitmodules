@@ -1,3 +1,6 @@
 [submodule "matchgame/assets"]
 	path = matchgame/assets
 	url = https://github.com/anthonyromrell/ArtisanDream.Tools
+[submodule "second/assets"]
+	path = second/assets
+	url = https://github.com/anthonyromrell/ArtisanDream.Tools
