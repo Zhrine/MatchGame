@@ -7,3 +7,6 @@
 [submodule "matchgame/assets/personal.tools"]
 	path = matchgame/assets/personal.tools
 	url = https://github.com/Zhrine/Tools.Repo
+[submodule "second/assets/personal.tools"]
+	path = second/assets/personal.tools
+	url = https://github.com/Zhrine/Tools.Repo
