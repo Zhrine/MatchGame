@@ -4,3 +4,6 @@
 [submodule "second/assets/tools"]
 	path = second/assets/tools
 	url = https://github.com/anthonyromrell/ArtisanDream.Tools
+[submodule "matchgame/assets/personal.tools"]
+	path = matchgame/assets/personal.tools
+	url = https://github.com/Zhrine/Tools.Repo
