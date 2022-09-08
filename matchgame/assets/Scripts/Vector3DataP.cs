@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vector3Data : MonoBehaviour
+public class Vector3DataP : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
