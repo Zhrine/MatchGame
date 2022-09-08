@@ -12,9 +12,14 @@ public class FloatDataP : ScriptableObject
     
     public float value;
 
-    public void UpdateValue(float number)
+    public void SetValue(float num)
     {
-        value += number;
+        value = num;
+    }
+
+    public void UpdateValue(float num)
+    {
+        value += num;
     }
     
 }
