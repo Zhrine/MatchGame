@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 250123395}
   - component: {fileID: 250123394}
   - component: {fileID: 250123393}
+  - component: {fileID: 250123398}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -171,7 +172,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1da297e7a69dfc409774a2eb1b30c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 62a4d16d18a4f0e4a9c2d153e332f056, type: 2}
+  idObj: {fileID: 11400000, guid: a7cebcb2dcb2ed74cbc0613b9995ae4f, type: 2}
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 250123398}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a7cebcb2dcb2ed74cbc0613b9995ae4f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  noMatchEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 70d223376b7326348973f64820cd44bc, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &250123395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -252,6 +295,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250123398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250123392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e38c1ca4d3cd4f49a145e978a1502c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &588962472
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +319,7 @@ GameObject:
   - component: {fileID: 588962476}
   - component: {fileID: 588962475}
   - component: {fileID: 588962478}
+  - component: {fileID: 588962479}
   - component: {fileID: 588962473}
   m_Layer: 0
   m_Name: Square
@@ -380,7 +436,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2beb04469fd408143abf999980caf57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 62a4d16d18a4f0e4a9c2d153e332f056, type: 2}
+  idObj: {fileID: 11400000, guid: a7cebcb2dcb2ed74cbc0613b9995ae4f, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 588962479}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a7cebcb2dcb2ed74cbc0613b9995ae4f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &588962479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588962472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e38c1ca4d3cd4f49a145e978a1502c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &844875382
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +477,7 @@ GameObject:
   - component: {fileID: 844875385}
   - component: {fileID: 844875384}
   - component: {fileID: 844875383}
+  - component: {fileID: 844875388}
   m_Layer: 0
   m_Name: Isometric Diamond
   m_TagString: Untagged
@@ -413,7 +497,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2beb04469fd408143abf999980caf57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: fb325b3f36848d44992f10437b09709f, type: 2}
+  idObj: {fileID: 11400000, guid: d9ff0cd5aa2e9604ba25ac00fd345503, type: 2}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 844875388}
+        m_TargetAssemblyTypeName: SpriteBehavior, Assembly-CSharp
+        m_MethodName: ChangeRendererColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d9ff0cd5aa2e9604ba25ac00fd345503, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &844875384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -510,6 +609,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844875388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844875382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e38c1ca4d3cd4f49a145e978a1502c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677326763
 GameObject:
   m_ObjectHideFlags: 0
