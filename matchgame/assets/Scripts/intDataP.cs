@@ -6,23 +6,13 @@ public class IntDataP : ScriptableObject
 {
     public int value;
 
-    public void UpdateValue(int number)
+    public void SetValue(int num)
     {
-        value += number;
+        value = num;
     }
 
-    public void ReplaceValue(int number)
+    public void UpdateValue(int num)
     {
-        value = number;
-    }
-
-    public void DisplayImage(Image img)
-    {
-        img.fillAmount = value;
-    }
-
-    public void DisplayNumber(Text txt)
-    {
-        txt.text = value.ToString();
+        value += num;
     }
 }
