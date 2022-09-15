@@ -9,19 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6df0c6962af14c60b2d5c35ebd9c64c, type: 3}
+  m_Script: {fileID: 11500000, guid: 10abbf0a4b9ac964cb47d295d1cb0c39, type: 3}
   m_Name: Score
   m_EditorClassIdentifier: 
+  onZeroEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   value: 0
-  decrementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  valueChangeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  atZeroEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  compareTrueEvent:
-    m_PersistentCalls:
-      m_Calls: []
