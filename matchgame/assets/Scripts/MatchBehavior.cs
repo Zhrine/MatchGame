@@ -22,6 +22,7 @@ public class MatchBehavior : MonoBehaviour
             noMatchEvent.Invoke();
             yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
+
         }
     }
     
