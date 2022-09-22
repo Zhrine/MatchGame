@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 257152902}
   - component: {fileID: 257152904}
   - component: {fileID: 257152905}
+  - component: {fileID: 257152906}
   m_Layer: 5
   m_Name: GoLable
   m_TagString: Untagged
@@ -397,12 +398,19 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
-  repeatEvent:
+  startCountEvent:
     m_PersistentCalls:
       m_Calls: []
-  endEvent:
+  repeatCountEvent:
     m_PersistentCalls:
       m_Calls: []
+  endCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canRun: 0
   counterNum: {fileID: 0}
   seconds: 3
 --- !u!114 &257152905
@@ -420,6 +428,26 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &257152906
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257152900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e6ac6d97f52374449babf1565479e65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &582658144
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +563,21 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1044459267}
+        m_TargetAssemblyTypeName: CoRoutineBehavior, Assembly-CSharp
+        m_MethodName: StartCounting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startCountEvent:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
         m_TargetAssemblyTypeName: IntDataP, Assembly-CSharp
         m_MethodName: SetValue
@@ -547,9 +590,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  repeatEvent:
+  repeatCountEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 257152905}
+        m_TargetAssemblyTypeName: TextMeshProBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntDataP, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 45060494}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -562,33 +617,9 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 257152905}
-        m_TargetAssemblyTypeName: TextMeshProBehavior, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntDataP, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  endEvent:
+  endCountEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 257152902}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GO!
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 45060494}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -601,6 +632,22 @@ MonoBehaviour:
           m_StringArgument: Hold
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 257152902}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GO!
+          m_BoolArgument: 0
+        m_CallState: 2
+  repeatUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canRun: 0
   counterNum: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
   seconds: 1
 --- !u!1 &1677326763
