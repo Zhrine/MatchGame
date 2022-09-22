@@ -238,7 +238,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 7f86dab8bdc0bf74693ad69fdbd8b699, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 257152903}
   - component: {fileID: 257152902}
   - component: {fileID: 257152904}
+  - component: {fileID: 257152905}
   m_Layer: 5
   m_Name: GoLable
   m_TagString: Untagged
@@ -304,9 +305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Word
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -395,11 +394,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2f169abd8526e45a325a2f30902b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
   repeatEvent:
     m_PersistentCalls:
       m_Calls: []
-  counterNum: 3
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  counterNum: {fileID: 0}
   seconds: 3
+--- !u!114 &257152905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257152900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490d8bf7265829b4aa96db0c47716545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &582658144
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +532,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2f169abd8526e45a325a2f30902b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
+        m_TargetAssemblyTypeName: IntDataP, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   repeatEvent:
     m_PersistentCalls:
       m_Calls:
@@ -527,7 +562,46 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
-  counterNum: 3
+      - m_Target: {fileID: 257152905}
+        m_TargetAssemblyTypeName: TextMeshProBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntDataP, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  endEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 257152902}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GO!
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 45060494}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hold
+          m_BoolArgument: 0
+        m_CallState: 2
+  counterNum: {fileID: 11400000, guid: 38a5c6dfc55f23e4cb1d77add8c75431, type: 2}
   seconds: 1
 --- !u!1 &1677326763
 GameObject:
