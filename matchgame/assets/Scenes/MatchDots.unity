@@ -214,6 +214,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: ddb5c0d103643dc47b09fe114eb4eea8, type: 2}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 13ecf3d795bee004b898818258a9a018, type: 2}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetCurrentColorRandomly
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CreateInstanceFromListRandomly
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ColorIDDataList, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Instancer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 013e9af9869466a44b91bd225443a938, type: 2}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366987000262041540, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
+      propertyPath: repeatUntilFalseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Vector3DataList, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3366987000262041541, guid: fcfac4a7e860e874e9ba157e38580f4a, type: 3}
       propertyPath: m_RootOrder
       value: 1
