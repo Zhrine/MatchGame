@@ -1,18 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float seconds = 1;
+    public WaitForSeconds wfsObj;
+   
+    private IEnumerator Start()
     {
-        
+        wfsObj = new WaitForSeconds(seconds);
+        yield return wfsObj;
+        Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e62b1826d0d0474cb27bef30851ad5e, type: 3}
-  m_Name: Blue
+  m_Name: Green
   m_EditorClassIdentifier: 
-  value: {r: 0, g: 0.043559313, b: 1, a: 1}
+  value: {r: 0.059298076, g: 0.6226415, b: 0, a: 1}

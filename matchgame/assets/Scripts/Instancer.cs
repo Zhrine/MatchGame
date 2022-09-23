@@ -1,5 +1,7 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu]
 public class Instancer : ScriptableObject
@@ -34,6 +36,12 @@ public class Instancer : ScriptableObject
         {
             num = 0;
         }
+    }
+    public void CreateInstanceFromListRandomly(Vector3DataList obj)
+    {
+        num = Random.Range(0, obj.vector3List.Count - 1);
+        Instantiate(prefab, obj.vector3List[num].value, Quaternion.identity);
+        
     }
     
 }
