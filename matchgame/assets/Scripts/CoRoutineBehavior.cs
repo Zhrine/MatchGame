@@ -1,25 +1,22 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CoRoutineBehavior : MonoBehaviour
 {
-    public UnityEvent startEvent,startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
+    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
 
     public bool canRun;
     public IntDataP counterNum;
     public float seconds = 3.0f;
-    private WaitForSeconds wfsObj;
-    private WaitForFixedUpdate wffuObj;
+    private WaitForSeconds _wfsObj;
+    private WaitForFixedUpdate _wffuObj;
 
     public void Start()
     {
         startEvent.Invoke();
-        
     }
-
-
+    
     public void StartCounting()
     {
         StartCoroutine(Counting());
@@ -28,16 +25,16 @@ public class CoRoutineBehavior : MonoBehaviour
     private IEnumerator Counting()
     {
         
-        wfsObj = new WaitForSeconds(seconds);
-        wffuObj = new WaitForFixedUpdate();
+        _wfsObj = new WaitForSeconds(seconds);
+        _wffuObj = new WaitForFixedUpdate();
         
         startCountEvent.Invoke();
-        yield return wfsObj;
+        yield return _wfsObj;
         while (counterNum.value > 0)
         {
             repeatCountEvent.Invoke();
             counterNum.value--;
-            yield return wfsObj;
+            yield return _wfsObj;
 
         }
         endCountEvent.Invoke();
@@ -53,7 +50,7 @@ public class CoRoutineBehavior : MonoBehaviour
     {
         while (canRun)
         {
-            yield return wfsObj;    
+            yield return _wfsObj;    
             repeatUntilFalseEvent.Invoke();
         }
     }
